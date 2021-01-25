@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title%}Harsh's Url Shortner{% endblock %}
+{% block content %}
+<form action="#"  method="post">
+    <div class="form-group">
+        <label for="url">Enter Url</label>
+        <input type="url" pattern="https://.*" size="50" name="nm" class="form-control" id="url" aria-describedby="Help" placeholder="https://long_example.com" required/>
+        <small id="Help" class="form-text text-muted">Get a Small url for the input one</small>
+    </div>
+
+    <button type="submit" class="btn btn-secondary">Submit</button>
+</form>
+
+{% if err %}
+
+    <div class="alert alert-danger" role="alert" style="position:fixed; left: 0px; width: 100%;">
+        This site doesn't Exists.Enter a valid Site
+    </div>
+{% endif %}
+{% endblock %}

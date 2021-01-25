@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title%}Harsh's Url Shortner{% endblock %}
+{% block content %}
+    <h1 id="input_to_copy">http://127.0.0.1:5000/{{short_url_to_display}}</h1>
+    <button onclick="myFunction()" class="btn btn-primary" style="position:relative;top:10px" data-toggle="popover" data-trigger="hover" data-content="Tap To Copy The Url">Copy text</button>
+    <br>
+    <a href="http://127.0.0.1:5000/" style="position:relative;top:20px">Back to Home</a>
+
+<script>
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
+</script>
+
+<script>
+    function myFunction() {
+        var r = document.createRange();
+        r.selectNode(document.getElementById('input_to_copy'));
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(r);
+        document.execCommand('copy');
+        window.getSelection().removeAllRanges();
+        
+    }
+</script>
+{% endblock %}
