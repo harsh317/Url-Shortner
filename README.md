@@ -3,6 +3,9 @@
 
 ## Tested
 - Cmd[Windows]
+## Test
+https://url-short-shortner.herokuapp.com/FR
+
 
 ## refernece taken
 - https://url-short-shortner.herokuapp.com/bC :)
